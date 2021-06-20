@@ -25,3 +25,8 @@ body {
     color: white;
     padding-top: 0.8rem;
 }
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #1ebba3;
+}

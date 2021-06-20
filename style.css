@@ -20,3 +20,8 @@ body {
 .navbar-nav li {
     padding-right: 0.7rem;
 }
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    padding-top: 0.8rem;
+}

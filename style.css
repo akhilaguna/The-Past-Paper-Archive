@@ -16,3 +16,7 @@ body {
 .navbar-brand img {
     height: 2rem;
 }
+
+.navbar-nav li {
+    padding-right: 0.7rem;
+}

@@ -12,3 +12,7 @@ body {
     letter-spacing: .1rem;
     background-color: rgba(0, 0, 0, 0.6)!important;
 }
+
+.navbar-brand img {
+    height: 2rem;
+}

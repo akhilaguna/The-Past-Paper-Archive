@@ -37,3 +37,21 @@ body {
   background-image: url(images/sangga-rima-roman-selia-LWfFfA5U5z8-unsplash-resized.png);
 
 }
+.caption
+
+{
+   width: 100%;
+
+  max-width: 100%;
+
+  position: absolute;
+
+  top: 38%;
+
+  z-index: 1;
+
+  color: white;
+
+  text-transform: uppercase;
+
+}

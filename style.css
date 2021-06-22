@@ -83,3 +83,16 @@ body {
 
 
 }
+.btn-lg
+
+{
+
+  border-width: medium;
+
+  border-radius: 0;
+
+  padding: 0.6rem 1.3rem;
+
+  font-size: 1.1rem;
+
+}

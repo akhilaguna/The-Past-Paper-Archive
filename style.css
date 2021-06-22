@@ -55,3 +55,18 @@ body {
   text-transform: uppercase;
 
 }
+.caption h1
+
+{
+
+  font-size: 3.8rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.3rem;
+
+  text-shadow: 0.1rem 0.1rem 0.8rem black;
+
+  padding-bottom: 1rem;
+
+}

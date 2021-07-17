@@ -1,10 +1,13 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PPA-Practise</title>
+    <title>Home</title>
     <link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/fixed.css">
@@ -20,22 +23,28 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.php" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="about.html" class="nav-link">About</a>
+                    <a href="about.php" class="nav-link">About</a>
                 </li>
                 <li class="nav-item">
-                    <a href="team.html" class="nav-link">Team</a>
+                    <a href="team.php" class="nav-link">Team</a>
                 </li>
+                <?php
+                            if(isset($_SESSION["useruid"]))
+                            {
+                                echo "<li class='nav-item'><a href='profile.php' class='nav-link'>Profile</a></li>";
+                                echo "<li class='nav-item'><a href='includes/logout.inc.php' class='nav-link'>Logout</a></li>";
+                            }
+                            else
+                            {
+                                echo "<li class='nav-item'><a href='login.php' class='nav-link'>Login</a></li>";
+                                echo "<li class='nav-item'><a href='signup.php' class='nav-link'>Signup</a></li>";  
+                            }
+        		?>
                 <li class="nav-item">
-                    <a href="#login" class="nav-link">Log In</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#login" class="nav-link">Sign Up</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="contact.php" class="nav-link">Contact</a>
                 </li>
             </ul>
         </div>
@@ -44,15 +53,15 @@
         <div class="landing">
             <div class="home-wrap">
                 <div class="home-inner">
-                    
+                    <img src="images/humberto-chavez-InrNz281-S8-unsplash.png" alt="" id="bimg">
                 </div>
             </div>
         </div>    
             <div class="caption text-center">
                 <h1>The Past Paper Archive</h1>
                 <h3>A one stop shop for all your exam past paper needs</h3>
-                <a href="papersol.html" class="btn btn-outline-light btn-lg">O/L</a>
-                <a href="papersal.html" class="btn btn-outline-light btn-lg">A/L</a>
+                <a href="papersol.php" class="btn btn-outline-light btn-lg">O/L</a>
+                <a href="papersal.php" class="btn btn-outline-light btn-lg">A/L</a>
             </div>
     </div>
 

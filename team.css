@@ -63,6 +63,13 @@ body {
     width: 80%;
     display: flex;
     margin: auto;
+    padding-top: 150px;
+}
+.home-inner h1
+{
+    color: white;
+    font-weight: bold;
+    text-align: center;
     padding-top: 100px;
 }
 .card
@@ -72,4 +79,12 @@ body {
 .card-title
 {
     font-weight: bold;
+}
+.card
+{
+    background-color: transparent;
+}
+.card h5, li
+{
+    color: white;
 }

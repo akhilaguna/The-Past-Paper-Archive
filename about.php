@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,22 +23,28 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.php" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="about.html" class="nav-link">About</a>
+                    <a href="about.php" class="nav-link">About</a>
                 </li>
                 <li class="nav-item">
-                    <a href="team.html" class="nav-link">Team</a>
+                    <a href="team.php" class="nav-link">Team</a>
                 </li>
+                <?php
+                            if(isset($_SESSION["useruid"]))
+                            {
+                                echo "<li class='nav-item'><a href='profile.php' class='nav-link'>Profile</a></li>";
+                                echo "<li class='nav-item'><a href='includes/logout.inc.php' class='nav-link'>Logout</a></li>";
+                            }
+                            else
+                            {
+                                echo "<li class='nav-item'><a href='login.php' class='nav-link'>Login</a></li>";
+                                echo "<li class='nav-item'><a href='signup.php' class='nav-link'>Signup</a></li>";  
+                            }
+        		?>
                 <li class="nav-item">
-                    <a href="#login" class="nav-link">Log In</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#login" class="nav-link">Sign Up</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="contact.php" class="nav-link">Contact</a>
                 </li>
             </ul>
         </div>
@@ -44,6 +53,7 @@
         <div class="landing">
             <div class="home-wrap">
                 <div class="home-inner">
+                    <img src="images/humberto-chavez-InrNz281-S8-unsplash.png" alt="" id="bimg">
                     <div class="section">  
                         <div class="container">
                             <div class="content-section">
@@ -51,15 +61,14 @@
                                     <h1>About Us</h1>
                                 </div>
                                 <div class="content">
-                                    <p><br><br> A significant problem us as students faced when doing our O/Ls and A/Ls was the difficulty in finding past papers
+                                    <p><br><br> A significant problem us as students faced when doing our A/Ls was the difficulty in finding past papers
                                          and exam questions on the internet. The only reliable option was to buy printed copies of books that had compiled around
                                         10 years’ worth of papers. Even then some of the papers didn’t have the answer scripts, or the answer scripts were made 
                                         by someone other than the professors making the paper. <br><br>
                                         So, the challenge the five of us as a team have given ourselves is to design and develop a website that will give students,
-                                        teachers and other interested parties the ability to access all of the available O/L and A/L past papers with their 
+                                        teachers and other interested parties the ability to access all of the available A/L past papers with their 
                                         original answer scripts at one place. They will be able to simply select the year, subject and relevant 
-                                        medium (Sinhala/Tamil/English) and acquire the desired paper and answers.  They will also be able to answer 
-                                        MCQ papers on the site itself and get an instant result on how much they got right.
+                                        medium (Sinhala/English) and acquire the desired paper and answers.  
                                     </p>
                                 </div>
                             </div>

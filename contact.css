@@ -9,6 +9,9 @@ body {
     overflow-x: hidden;
     font-family: 'Lato', sans-serif;
     color: #505962;
+    background-image: url(images/humberto-chavez-InrNz281-S8-unsplash.png);
+    background-repeat: repeat;
+    background-size: cover;
 }
 
 .navbar {
@@ -58,9 +61,18 @@ body {
 .container
 {
     width: 80%;
-    display: flex;
+    display: block;
     margin: auto;
     padding-top: 100px;
+}
+.container h2
+{
+    color: white;
+}
+.container p
+{
+    color: white;
+    font-size: large;
 }
 .content-section
 {
@@ -76,7 +88,6 @@ body {
 {
     width: 100%;
     height: auto;
-    margin-left: 20px;
 }
 .title h1
 {
@@ -87,5 +98,14 @@ body {
 .content p
 {
     font-weight: bold;
+    color: white;
+}
+li p a
+{
+    text-decoration: none;
+    color: white;
+}
+.row label
+{
     color: white;
 }

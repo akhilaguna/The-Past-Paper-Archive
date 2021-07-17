@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,22 +23,28 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.php" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="about.html" class="nav-link">About</a>
+                    <a href="about.php" class="nav-link">About</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#team" class="nav-link">Team</a>
+                    <a href="team.php" class="nav-link">Team</a>
                 </li>
+                <?php
+                            if(isset($_SESSION["useruid"]))
+                            {
+                                echo "<li class='nav-item'><a href='profile.php' class='nav-link'>Profile</a></li>";
+                                echo "<li class='nav-item'><a href='includes/logout.inc.php' class='nav-link'>Logout</a></li>";
+                            }
+                            else
+                            {
+                                echo "<li class='nav-item'><a href='login.php' class='nav-link'>Login</a></li>";
+                                echo "<li class='nav-item'><a href='signup.php' class='nav-link'>Signup</a></li>";  
+                            }
+        		?>
                 <li class="nav-item">
-                    <a href="#login" class="nav-link">Log In</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#login" class="nav-link">Sign Up</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="contact.php" class="nav-link">Contact</a>
                 </li>
             </ul>
         </div>
@@ -44,6 +53,7 @@
         <div class="landing">
             <div class="home-wrap">
                 <div class="home-inner">
+                    <img src="images/humberto-chavez-InrNz281-S8-unsplash.png" alt="" id="bimg">
                     <div class="section">
                         
                         <div class="image-section">
@@ -57,12 +67,23 @@
                                     <th colspan="2">2020</th>
                                 </tr>
                                 <tr>
-                                    <td>Biology</td>
+                                    <td>Buddhism</td>
                                     <td>Sinhala</td>
+                                    <td>English</td>
+                                    <td><a href="https://drive.google.com/file/d/1kfymEuzSl8eZ5TflYGTPa_M67soy2fSc/view?usp=sharing">Sinhala</a></td>
+                                    <td>English</td>
+                                    <td><a href="https://drive.google.com/file/d/1FcRC63EUurvjux4ul_GbQp2gL0jc9JZo/view?usp=sharing">Sinhala</a></td>
                                     <td>English</td>
                                     <td>Sinhala</td>
                                     <td>English</td>
+                                </tr>
+                                <tr>
+                                    <td>History</td>
                                     <td>Sinhala</td>
+                                    <td>English</td>
+                                    <td><a href="https://drive.google.com/file/d/1LCilTIlXmnsZY4rtFWnhk0wjxCLMFezW/view?usp=sharing">Sinhala</a></td>
+                                    <td>English</td>
+                                    <td><a href="https://drive.google.com/file/d/1bVWMgvOLabANEI4HFlON_Ej2hupvcmOZ/view?usp=sharing">Sinhala</a></td>
                                     <td>English</td>
                                     <td>Sinhala</td>
                                     <td>English</td>
@@ -71,64 +92,53 @@
                                     <td>Mathematics</td>
                                     <td>Sinhala</td>
                                     <td>English</td>
-                                    <td>Sinhala</td>
+                                    <td><a href="https://drive.google.com/file/d/1lcYiF25AOMYfGweUPR8rsx8pFSii9EGk/view?usp=sharing">Sinhala</a></td>
                                     <td>English</td>
-                                    <td>Sinhala</td>
-                                    <td>English</td>
-                                    <td>Sinhala</td>
-                                    <td>English</td>
-                                </tr>
-                                <tr>
-                                    <td>English</td>
-                                    <td>Sinhala</td>
-                                    <td>English</td>
-                                    <td>Sinhala</td>
-                                    <td>English</td>
-                                    <td>Sinhala</td>
+                                    <td><a href="https://drive.google.com/file/d/1xd9dMOLO-efhtY0Fy7pnLmxRnMxxobEp/view?usp=sharing">Sinhala</a></td>
                                     <td>English</td>
                                     <td>Sinhala</td>
                                     <td>English</td>
                                 </tr>
                                 <tr>
-                                    <td>History</td>
+                                    <td>Science</td>
                                     <td>Sinhala</td>
                                     <td>English</td>
-                                    <td>Sinhala</td>
+                                    <td><a href="https://drive.google.com/file/d/16wJ_4iUo71wrdFM0g7d4wfFbOz2Gjb4L/view?usp=sharing">Sinhala</a></td>
                                     <td>English</td>
-                                    <td>Sinhala</td>
-                                    <td>English</td>
-                                    <td>Sinhala</td>
-                                    <td>English</td>
-                                </tr>
-                                <tr>
-                                    <td>History</td>
-                                    <td>Sinhala</td>
-                                    <td>English</td>
-                                    <td>Sinhala</td>
-                                    <td>English</td>
-                                    <td>Sinhala</td>
+                                    <td><a href="https://drive.google.com/file/d/1k1Wn5SQraec-y8slQKBtrayG9FpXs4KI/view?usp=sharing">Sinhala</a></td>
                                     <td>English</td>
                                     <td>Sinhala</td>
                                     <td>English</td>
                                 </tr>
                                 <tr>
-                                    <td>History</td>
+                                    <td>Sinhala</td>
                                     <td>Sinhala</td>
                                     <td>English</td>
-                                    <td>Sinhala</td>
+                                    <td><a href="https://drive.google.com/file/d/1MahAngWW75U_kG6ca3h5ymclB9dalCuj/view?usp=sharing">Sinhala</a></td>
                                     <td>English</td>
-                                    <td>Sinhala</td>
+                                    <td><a href="https://drive.google.com/file/d/1O2ueG9jDOTJq7TSKOcB8z1TGc1NxoKNG/view?usp=sharing">Sinhala</a></td>
                                     <td>English</td>
                                     <td>Sinhala</td>
                                     <td>English</td>
                                 </tr>
                                 <tr>
-                                    <td>History</td>
+                                    <td>Commerce</td>
+                                    <td>Sinhala</td>
+                                    <td>English</td>
+                                    <td><a href="https://drive.google.com/file/d/1pZ1IP0Wa_sPAhsvuocvZitDtoFqtGObP/view?usp=sharing">Sinhala</a></td>
+                                    <td>English</td>
+                                    <td><a href="https://drive.google.com/file/d/1LVQF9zqHqR0ln_cIL5JUDvlp9rZYHrn5/view?usp=sharing">Sinhala</a></td>
+                                    <td>English</td>
+                                    <td>Sinhala</td>
+                                    <td>English</td>
+                                </tr>
+                                <tr>
+                                    <td>Geography</td>
                                     <td>Sinhala</td>
                                     <td>English</td>
                                     <td>Sinhala</td>
                                     <td>English</td>
-                                    <td>Sinhala</td>
+                                    <td><a href="https://drive.google.com/file/d/1KvATjU4Tmh-THfLylPl_aEMllPKbf1et/view?usp=sharing">Sinhala</a></td>
                                     <td>English</td>
                                     <td>Sinhala</td>
                                     <td>English</td>

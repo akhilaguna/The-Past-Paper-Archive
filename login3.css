@@ -62,6 +62,18 @@ body {
     margin: auto;
     padding-top: 100px;
 }
+.container h1
+{
+    font-weight: bold;
+}
+.form-box
+{
+    margin: auto;
+}
+.form-box h1
+{
+    color: white;
+}
 .content-section
 {
     float: left;
@@ -82,9 +94,12 @@ body {
 {
     text-transform: uppercase;
     font-weight: bold;
-    color: white;
 }
 .content p
+{
+    font-weight: bold;
+}
+.form-label
 {
     font-weight: bold;
     color: white;

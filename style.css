@@ -4,9 +4,6 @@ body {
     overflow-x: hidden;
     font-family: 'Lato', sans-serif;
     color: #505962;
-    background-image: url(images/humberto-chavez-InrNz281-S8-unsplash.png);
-    background-repeat: repeat;
-    background-size: cover;
 }
 
 .navbar {
